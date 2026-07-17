@@ -157,17 +157,17 @@ svg {
 }
 
 .logo-img {
-    height: 320px;
+    height: 350px;
     width: auto;
-    margin: -95px -100px -105px -90px;
+    margin: -100px -100px -120px -90px;
     display: block;
     object-fit: contain;
     transition: var(--transition-fast);
 }
 
 .site-header.scrolled .logo-img {
-    height: 250px;
-    margin: -76px -90px -84px -75px;
+    height: 270px;
+    margin: -80px -90px -95px -75px;
 }
 
 .desktop-nav {
@@ -1849,13 +1849,13 @@ svg {
     }
     
     .logo-img {
-        height: 220px;
-        margin: -66px -70px -74px -60px;
+        height: 250px;
+        margin: -72px -70px -82px -60px;
     }
     
     .site-header.scrolled .logo-img {
-        height: 180px;
-        margin: -56px -60px -64px -50px;
+        height: 210px;
+        margin: -62px -60px -72px -50px;
     }
     
     .mobile-toggle {
