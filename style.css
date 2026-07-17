@@ -477,7 +477,7 @@ svg {
     height: 100%;
     border-radius: 50%;
     background-color: var(--secondary-color);
-    border: 8px solid var(--white);
+    border: 8px solid var(--accent-color);
     box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12);
     overflow: hidden;
 }
