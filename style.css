@@ -302,7 +302,7 @@ svg {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 2.25rem;
-    border-radius: 9999px;
+    border-radius: 0.85rem;
     font-size: 0.95rem;
     font-weight: 600;
     box-shadow: 0 10px 20px -5px rgba(58, 95, 67, 0.25);
@@ -323,7 +323,7 @@ svg {
     background-color: transparent;
     color: var(--text-color);
     padding: 1rem 2rem;
-    border-radius: 9999px;
+    border-radius: 0.85rem;
     font-size: 0.95rem;
     font-weight: 600;
     border: 1px solid var(--primary-color);
@@ -438,6 +438,14 @@ svg {
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
+}
+
+.hero-subtext {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+    opacity: 0.9;
+    font-weight: 550;
 }
 
 /* Hero Portrait Image Column */
@@ -1766,6 +1774,11 @@ svg {
         justify-content: center;
     }
     
+    .hero-subtext {
+        text-align: center;
+        width: 100%;
+    }
+    
     .hero-image-col {
         justify-content: center;
     }
@@ -1837,6 +1850,17 @@ svg {
     .hero-image-wrapper {
         width: 280px;
         height: 280px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
     }
     
     .floating-badge {
