@@ -302,7 +302,7 @@ svg {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 2.25rem;
-    border-radius: 0.85rem;
+    border-radius: 9999px;
     font-size: 0.95rem;
     font-weight: 600;
     box-shadow: 0 10px 20px -5px rgba(58, 95, 67, 0.25);
@@ -323,7 +323,7 @@ svg {
     background-color: transparent;
     color: var(--text-color);
     padding: 1rem 2rem;
-    border-radius: 0.85rem;
+    border-radius: 9999px;
     font-size: 0.95rem;
     font-weight: 600;
     border: 1px solid var(--primary-color);
@@ -334,6 +334,26 @@ svg {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+/* Button Pulse Attention Animation */
+.btn-pulse {
+    animation: btnPulse 2s infinite;
+}
+
+@keyframes btnPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(58, 95, 67, 0.5);
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(58, 95, 67, 0);
+        transform: scale(1.025);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(58, 95, 67, 0);
+        transform: scale(1);
+    }
 }
 
 .btn-secondary .arrow-icon {
@@ -438,14 +458,6 @@ svg {
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
-}
-
-.hero-subtext {
-    font-size: 0.875rem;
-    color: var(--text-light);
-    margin-top: 1rem;
-    opacity: 0.9;
-    font-weight: 550;
 }
 
 /* Hero Portrait Image Column */
@@ -1774,11 +1786,6 @@ svg {
         justify-content: center;
     }
     
-    .hero-subtext {
-        text-align: center;
-        width: 100%;
-    }
-    
     .hero-image-col {
         justify-content: center;
     }
@@ -1852,17 +1859,6 @@ svg {
         height: 280px;
     }
     
-    .hero-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .hero-actions .btn-primary,
-    .hero-actions .btn-secondary {
-        width: 100%;
-        justify-content: center;
-    }
-    
     .floating-badge {
         transform: scale(0.82);
     }
@@ -1881,6 +1877,17 @@ svg {
     
     .services-grid, .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
     
     .form-row-grid {
