@@ -118,21 +118,15 @@ svg {
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: rgba(252, 250, 246, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(232, 239, 233, 0.5);
+    background-color: #FCFAF6;
+    border-bottom: 1px solid rgba(232, 239, 233, 0.8);
     height: 95px;
     transition: var(--transition-fast);
-    /* GPU acceleration to prevent blurriness bug in Chromium browsers */
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    will-change: transform;
 }
 
 .site-header.scrolled {
-    background-color: rgba(252, 250, 246, 0.95);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    background-color: #FCFAF6;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     height: 75px;
 }
 
@@ -203,15 +197,22 @@ svg {
 /* Mobile Toggle Hamburger button */
 .mobile-toggle {
     display: none;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     cursor: pointer;
     color: var(--text-color);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    z-index: 102;
 }
 
 .hamburger-icon {
     width: 1.75rem;
     height: 1.75rem;
+    display: block;
 }
 
 /* Mobile Sidebar Drawer */
@@ -433,10 +434,15 @@ svg {
     justify-content: flex-start;  /* Swapped to left-aligned start */
 }
 
-.hero-image-wrapper {
+.hero-image-container {
     position: relative;
     width: 340px;
     height: 340px;
+}
+
+.hero-image-wrapper {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--secondary-color);
     border: 8px solid var(--white);
@@ -1650,8 +1656,8 @@ svg {
 }
 
 .copyright-text {
-    font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* 12. Animations Support */
@@ -1804,26 +1810,33 @@ svg {
     }
     
     .mobile-toggle {
-        display: block;
+        display: flex;
     }
     
     .hero-title {
         font-size: 2.25rem;
     }
     
+    .hero-image-container,
     .hero-image-wrapper {
         width: 280px;
         height: 280px;
     }
     
+    .floating-badge {
+        transform: scale(0.82);
+    }
+    
     .badge-bottom-left {
-        left: -20px;
-        bottom: 12px;
+        left: -25px;
+        bottom: 15px;
+        transform-origin: left bottom;
     }
     
     .badge-top-right {
-        right: -20px;
-        top: 20px;
+        right: -25px;
+        top: 25px;
+        transform-origin: right top;
     }
     
     .services-grid, .testimonials-grid {
