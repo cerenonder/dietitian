@@ -177,19 +177,21 @@ svg {
 }
 
 .nav-link {
-    font-size: 0.875rem;
-    font-weight: 600; /* More contrast */
+    font-size: 1rem;
+    font-weight: 750;
     color: var(--text-color);
     position: relative;
     padding: 0.25rem 0;
+    letter-spacing: 0.01em;
+    transition: var(--transition-fast);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: -2px;
+    height: 3px;
+    bottom: -4px;
     left: 0;
     background-color: var(--primary-color);
     transition: var(--transition-fast);
