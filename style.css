@@ -30,6 +30,11 @@
     padding: 0;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -40,8 +45,13 @@ body.site-body {
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.65;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+main {
+    overflow: hidden;
+    width: 100%;
 }
 
 /* Selection Highlight */
@@ -1738,6 +1748,10 @@ svg {
         text-align: center;
     }
     
+    .hero-image-col {
+        justify-content: center;
+    }
+    
     .hero-content {
         align-items: center;
     }
@@ -1945,5 +1959,12 @@ svg {
     .floating-wa-icon {
         width: 28px !important;
         height: 28px !important;
+    }
+}
+
+/* Hide floating badges on extra small screens to prevent layout overflow */
+@media (max-width: 576px) {
+    .floating-badge {
+        display: none !important;
     }
 }
