@@ -152,74 +152,31 @@ svg {
     justify-content: space-between;
 }
 
-/* Luxury Modern Logo Brand Component */
-.logo-brand {
+/* Header Logo Component */
+.logo {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
+    height: 100%;
     text-decoration: none;
     transition: var(--transition-fast);
 }
 
-.logo-brand:hover {
+.logo:hover {
     transform: translateY(-1px);
 }
 
-.logo-icon-wrapper {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 1.5px solid rgba(212, 175, 55, 0.4);
-    box-shadow: 0 4px 15px rgba(58, 95, 67, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 6px;
-    transition: var(--transition-fast);
-}
-
-.site-header.scrolled .logo-icon-wrapper {
-    width: 44px;
-    height: 44px;
-    padding: 4px;
-}
-
 .logo-img {
-    width: 100%;
-    height: 100%;
+    height: 72px;
+    width: auto;
+    max-height: 80px;
     object-fit: contain;
     display: block;
-}
-
-.logo-text-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-title {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-color);
-    line-height: 1.15;
-    letter-spacing: -0.015em;
+    mix-blend-mode: multiply;
     transition: var(--transition-fast);
 }
 
-.site-header.scrolled .logo-title {
-    font-size: 1.12rem;
-}
-
-.logo-sub {
-    font-family: var(--font-alt);
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    line-height: 1.2;
+.site-header.scrolled .logo-img {
+    height: 60px;
 }
 
 .desktop-nav {
@@ -2340,18 +2297,12 @@ svg {
         display: none;
     }
     
-    .logo-icon-wrapper {
-        width: 44px;
-        height: 44px;
-        padding: 4px;
+    .logo-img {
+        height: 54px;
     }
     
-    .logo-title {
-        font-size: 1.05rem;
-    }
-    
-    .logo-sub {
-        font-size: 0.62rem;
+    .site-header.scrolled .logo-img {
+        height: 46px;
     }
     
     .mobile-toggle {
