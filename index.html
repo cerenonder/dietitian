@@ -27,8 +27,14 @@
     <!-- Navigation Header -->
     <header id="main-header" class="site-header">
         <div class="nav-container">
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="Dyt. Şevval Zeren Önder" class="logo-img">
+            <a href="#home" class="logo-brand">
+                <div class="logo-icon-wrapper">
+                    <img src="logo.png" alt="Dyt. Şevval Zeren Önder" class="logo-img">
+                </div>
+                <div class="logo-text-col">
+                    <span class="logo-title">Dyt. Şevval Zeren Önder</span>
+                    <span class="logo-sub">Beslenme ve Diyet Uzmanı</span>
+                </div>
             </a>
             
             <!-- Desktop Navigation Menu -->
@@ -66,62 +72,170 @@
         <!-- Hero Section -->
         <section id="home" class="hero-section">
             <div class="hero-container">
-                <!-- Left image column (swapped from right) -->
-                <div class="hero-image-col animate-fade-in-up-delayed">
-                    <div class="hero-image-container">
-                        <div class="hero-image-wrapper">
-                            <!-- Profile Image -->
-                            <img src="diyetisyen-profil.jpg" alt="Diyetisyen Şevval Zeren Önder" class="hero-profile-img">
+                <!-- Left: Impactful Text Content & Trust Stats -->
+                <div class="hero-content animate-fade-in-up">
+                    <!-- Live Availability Badge -->
+                    <div class="hero-live-badge">
+                        <span class="live-pulse-dot"></span>
+                        <span class="live-badge-text">2026 Danışan Kabulü Açık • Online & Yüz Yüze</span>
+                    </div>
+
+                    <!-- Main Editorial Title -->
+                    <h1 class="hero-title">
+                        Bedeninizi Dinleyin, <br>
+                        <span class="hero-italic-highlight">Yasaklar Olmadan</span> <br>
+                        İdeal Sağlığınıza Ulaşın.
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-description">
+                        Katı listeler ve aç kalmak yerine; metabolizmanıza özel bilimsel yaklaşım, sürdürülebilir beslenme alışkanlıkları ve haftalık birebir motivasyon takibiyle hayatınızı dönüştürün.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-hero-primary btn-glow">
+                            <span>Hemen Başla / Randevu Al</span>
+                            <svg class="btn-arrow-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                        <a href="#services" class="btn-hero-secondary">
+                            <span>Danışmanlık Paketleri</span>
+                            <svg class="btn-arrow-down-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Hero Proof & Stats Bar -->
+                    <div class="hero-proof-bar">
+                        <div class="hero-stat-item">
+                            <span class="stat-big-number">500+</span>
+                            <span class="stat-small-label">Mutlu Danışan</span>
                         </div>
-                        
-                        <!-- Floating Badge 1 (Bottom Left) -->
-                        <div class="floating-badge badge-bottom-left">
-                            <div class="badge-icon-bg bg-light">
-                                <svg class="badge-svg primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div class="badge-text">
-                                <span class="badge-label">Memnuniyet</span>
-                                <span class="badge-title">%98 Danışan Skoru</span>
-                            </div>
+                        <div class="stat-divider"></div>
+                        <div class="hero-stat-item">
+                            <span class="stat-big-number">%98</span>
+                            <span class="stat-small-label">Başarı & Memnuniyet</span>
                         </div>
-                        
-                        <!-- Floating Badge 2 (Top Right) -->
-                        <div class="floating-badge badge-top-right">
-                            <div class="badge-icon-bg bg-primary">
-                                <svg class="badge-svg white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
+                        <div class="stat-divider"></div>
+                        <div class="hero-stat-item rating-item">
+                            <div class="stat-stars-row">
+                                <span class="star-gold">★</span>
+                                <span class="star-gold">★</span>
+                                <span class="star-gold">★</span>
+                                <span class="star-gold">★</span>
+                                <span class="star-gold">★</span>
+                                <strong class="rating-value">4.9/5</strong>
                             </div>
-                            <div class="badge-text">
-                                <span class="badge-label">Tecrübe</span>
-                                <span class="badge-title">Uzman Diyetisyen</span>
-                            </div>
+                            <span class="stat-small-label">Danışan Değerlendirmesi</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right text content (swapped from left) -->
-                <div class="hero-content animate-fade-in-up">
-                    <div class="hero-tag">
-                        <span class="pulse-dot"></span>
-                        Sağlıklı Yaşam Rehberiniz
+                <!-- Right: Editorial Portrait Showcase with Glassmorphic Floating Cards -->
+                <div class="hero-visual-col animate-fade-in-up-delayed">
+                    <div class="hero-showcase">
+                        <!-- Decorative Backing Aura & Glow -->
+                        <div class="hero-aura-glow"></div>
+                        <div class="hero-decor-ring"></div>
+
+                        <!-- Portrait Frame (Luxury Editorial Squircle Frame) -->
+                        <div class="hero-portrait-card">
+                            <div class="portrait-image-wrapper">
+                                <img src="diyetisyen-profil.png" alt="Dyt. Şevval Zeren Önder - Beslenme ve Diyet Uzmanı" class="hero-portrait-img">
+                                <div class="portrait-gradient-overlay"></div>
+                            </div>
+
+                            <!-- Portrait Bottom Identification Bar -->
+                            <div class="portrait-caption-bar">
+                                <div class="caption-info">
+                                    <h2 class="caption-name">Dyt. Şevval Zeren Önder</h2>
+                                    <p class="caption-title">Beslenme ve Diyet Uzmanı</p>
+                                </div>
+                                <div class="caption-badge">
+                                    <svg class="verified-check-svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>İAÜ Mezunu</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Glass Card 1: Kişiye Özel Beslenme (Top Right) -->
+                        <div class="hero-float-card float-card-top-right float-anim-1">
+                            <div class="float-icon-box bg-emerald">
+                                <svg class="float-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="float-content">
+                                <span class="float-tag">Bilimsel Metot</span>
+                                <span class="float-title">%100 Bireysel Plan</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Glass Card 2: Yasak Yok, Denge Var (Bottom Left) -->
+                        <div class="hero-float-card float-card-bottom-left float-anim-2">
+                            <div class="float-icon-box bg-gold">
+                                <svg class="float-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="float-content">
+                                <span class="float-tag">Sürdürülebilirlik</span>
+                                <span class="float-title">Aç Kalmadan Kalıcı Kilo</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Glass Card 3: WhatsApp Desteği (Top Left / Small Pill) -->
+                        <div class="hero-float-pill float-pill-top-left float-anim-3">
+                            <span class="pill-dot"></span>
+                            <span class="pill-text">7/24 WhatsApp İletişimi</span>
+                        </div>
                     </div>
-                    <h1 class="hero-title">
-                        Sağlıklı Yaşam Bir Diyet Değil, <span class="italic-serif">Kendinize</span> Verdiğiniz En Güzel Sözdür.
-                    </h1>
-                    <p class="hero-description">
-                        Bireyselleştirilmiş, sürdürülebilir beslenme planları ve bilimsel temelli yaklaşım ile aç kalmadan, hayat kalitenizi artırarak ideal formunuza kavuşun.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn-primary btn-pulse">Hemen Başla / Randevu Al</a>
-                        <a href="#about" class="btn-secondary">
-                            <span>Beni Yakından Tanıyın</span>
-                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
+                </div>
+            </div>
+
+            <!-- Value Propositions Bottom Banner Strip -->
+            <div class="hero-features-strip">
+                <div class="features-strip-container">
+                    <div class="strip-item">
+                        <div class="strip-icon-circle">
+                            <svg class="strip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                        </div>
+                        <div class="strip-text">
+                            <span class="strip-title">Kişiye Özel Menü</span>
+                            <span class="strip-desc">Yaşam tarzınıza tam uyumlu</span>
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-icon-circle">
+                            <svg class="strip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        </div>
+                        <div class="strip-text">
+                            <span class="strip-title">Birebir WhatsApp Takibi</span>
+                            <span class="strip-desc">Her an yanınızda motivasyon</span>
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-icon-circle">
+                            <svg class="strip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <div class="strip-text">
+                            <span class="strip-title">Haftalık Detaylı Analiz</span>
+                            <span class="strip-desc">Düzenli ölçüm & hedef takibi</span>
+                        </div>
+                    </div>
+                    <div class="strip-item">
+                        <div class="strip-icon-circle">
+                            <svg class="strip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                        </div>
+                        <div class="strip-text">
+                            <span class="strip-title">Online & Yüz Yüze</span>
+                            <span class="strip-desc">Mesafe tanımayan esneklik</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburgerIconPath = document.getElementById('hamburger-icon-path');
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
-    
+
     const appointmentForm = document.getElementById('appointment-form');
     const submitEmailBtn = document.getElementById('submit-email');
 
     // WhatsApp and Email configurations
     const dietitianWhatsappNumber = "905070700277"; // Updated target dietitian phone
-    const dietitianEmailAddress = "sevvalzeren@gmail.com";
+    const dietitianEmailAddress = "dyt.sevvalzeren@gmail.com";
 
     // 2. Sticky Header & Active Nav Link Highlight on Scroll
     const handleScroll = () => {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Mobile Sidebar Menu Toggle Controls
     const toggleMobileMenu = () => {
         const isOpen = mobileNav.classList.contains('translate-x-0');
-        
+
         if (isOpen) {
             // Close menu
             mobileNav.classList.remove('translate-x-0');
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // WhatsApp Message Submission Redirect
     const sendToWhatsApp = (e) => {
         e.preventDefault();
-        
+
         if (!appointmentForm.checkValidity()) {
             appointmentForm.reportValidity();
             return;
@@ -130,15 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = getFormData();
         const msgText = `Merhaba Diyetisyen Şevval Hanım, Randevu Başvurusu yapmak istiyorum:\n\n` +
-                        `👤 *Ad Soyad:* ${data.name}\n` +
-                        `📞 *Telefon:* ${data.phone}\n` +
-                        `✉️ *E-Posta:* ${data.email}\n` +
-                        `🥗 *Hizmet:* ${data.service}\n` +
-                        `📝 *Not:* ${data.message ? data.message : 'Ek not belirtilmedi.'}`;
-        
+            `👤 *Ad Soyad:* ${data.name}\n` +
+            `📞 *Telefon:* ${data.phone}\n` +
+            `✉️ *E-Posta:* ${data.email}\n` +
+            `🥗 *Hizmet:* ${data.service}\n` +
+            `📝 *Not:* ${data.message ? data.message : 'Ek not belirtilmedi.'}`;
+
         const encText = encodeURIComponent(msgText);
         const waUrl = `https://api.whatsapp.com/send?phone=${dietitianWhatsappNumber}&text=${encText}`;
-        
+
         window.open(waUrl, '_blank');
     };
 
@@ -152,16 +152,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = getFormData();
         const subject = `Randevu Başvurusu - ${data.name}`;
         const emailBody = `Merhaba Diyetisyen Şevval Hanım,\n\n` +
-                          `Aşağıdaki bilgilerle beslenme danışmanlığı randevusu oluşturmak istiyorum:\n\n` +
-                          `Ad Soyad: ${data.name}\n` +
-                          `Telefon: ${data.phone}\n` +
-                          `E-Posta: ${data.email}\n` +
-                          `Hizmet Türü: ${data.service}\n` +
-                          `Not: ${data.message ? data.message : 'Not girilmedi.'}\n\n` +
-                          `İyi çalışmalar dilerim.`;
+            `Aşağıdaki bilgilerle beslenme danışmanlığı randevusu oluşturmak istiyorum:\n\n` +
+            `Ad Soyad: ${data.name}\n` +
+            `Telefon: ${data.phone}\n` +
+            `E-Posta: ${data.email}\n` +
+            `Hizmet Türü: ${data.service}\n` +
+            `Not: ${data.message ? data.message : 'Not girilmedi.'}\n\n` +
+            `İyi çalışmalar dilerim.`;
 
         const mailtoUrl = `mailto:${dietitianEmailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-        
+
         window.location.href = mailtoUrl;
     };
 
